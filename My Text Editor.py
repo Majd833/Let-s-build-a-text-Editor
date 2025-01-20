@@ -9,9 +9,7 @@ window.columnconfigure(1, minsize=800, weight=1)
 
 def open_file():
   """Open a file for editing."""
-  filepath = askopenfilename(
-    filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")]
-  )
+  filepath = askopenfilename( filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
   if not filepath:
     return
   txt_edit.delete(1.0, END)
